@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:assessment_table_data/constant/r.dart';
 import 'package:assessment_table_data/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -15,7 +16,7 @@ class SplasScreen extends StatefulWidget {
 class _SplasScreenState extends State<SplasScreen> {
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds: 4), () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const LoginScreen()),
@@ -27,9 +28,8 @@ class _SplasScreenState extends State<SplasScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SizedBox(
-          width: double.infinity,
-          child: Image.asset("assets/img/0. Splash Screen.jpg", fit: BoxFit.fitWidth,))
+        child: SizedBox.expand(
+          child: Image.asset(R.assets.splash_screen, fit: BoxFit.cover,))
       ),
     );
   }
